@@ -1,0 +1,22 @@
+Как выложить «Хоббиты» на GitHub и Vercel
+
+В этой папке нет node_modules — специально, чтобы GitHub принял загрузку.
+Не добавляйте сюда старую папку node_modules и не загружайте прошлый архив develop-hobby-project-website: там слишком много файлов, и сборка может искать отсутствующие картинки.
+
+1. GitHub
+   - Создайте пустой репозиторий.
+   - Add file → Upload files.
+   - Перетащите содержимое ЭТОЙ папки: index.html, package.json, package-lock.json, tsconfig.json, vite.config.ts, vercel.json, папку src и этот файл.
+   - Файлов меньше 20, скрытых файлов нет.
+   - Нажмите Commit changes.
+
+2. Vercel
+   - Add New → Project → Import Git Repository.
+   - Framework Preset: Vite.
+   - Build Command: npm run build
+   - Output Directory: dist
+   - Deploy.
+
+Фото первого экрана и блока «Три способа сделать своё» уже вшиты в код (src/data/siteImages.ts).
+Карта и фото мастерских подгружаются отдельно, как раньше.
+Vercel сам выполнит npm install, папку node_modules загружать не нужно.
